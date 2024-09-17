@@ -1,0 +1,35 @@
+# Clash YAML Configuration
+
+# General settings
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Global # Mode diubah menjadi 'Global'
+log-level: info
+
+# Proxies
+proxies:
+  - name: "10.lowh.net"
+    type: vmess
+    server: 10.lowh.net
+    port: 443
+    uuid: 0f0c8dd0-6679-11ef-9b4a-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: 10.lowh.net
+
+# Proxy groups
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "10.lowh.net"
+
+# Rules
+rules:
+  - MATCH,Proxy
