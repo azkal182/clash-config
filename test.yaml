@@ -113,6 +113,63 @@ proxies:
       headers:
         Host: sg.xmbb.net
     udp: true
+
+  - name: VM_HSP1.HTMLCDN.NET
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 8800cc50-63ca-11ef-a685-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: hsp1.htmlcdn.net
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: hsp1.htmlcdn.net
+    udp: true
+    
+  - name: TJ_4.LOWH.NET
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 52c9c560-6679-11ef-9f00-1577c1651679
+    skip-cert-verify: true
+    sni: 4.lowh.net
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: 4.lowh.net
+    udp: true
+  - name: TJ_BIZNET1.1SERVER.CO
+    server: 104.17.3.81support.zoom.us
+    port: 443
+    type: trojan
+    password: 768490a0-6679-11ef-83fb-1577c1651679
+    skip-cert-verify: true
+    sni: biznet1.1server.co
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: biznet1.1server.co
+    udp: true
+  - name: TJ_HSP2.HTMLCDN.NET
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: a05c23a0-6679-11ef-8db6-1577c1651679
+    skip-cert-verify: true
+    sni: hsp2.htmlcdn.net
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: hsp2.htmlcdn.net
+    udp: true
 # Proxy groups
 proxy-groups:
   - name: "Load Balance"
@@ -126,6 +183,11 @@ proxy-groups:
       - TJ_11.LOWH.NET
       - TJ_SG-TROJAN.1SERVER.CO
       - TJ_SG.XMBB.NET
+      - TJ_4.LOWH.NET
+      - TJ_BIZNET1.1SERVER.CO
+      - TJ_HSP2.HTMLCDN.NET
+      - VM_HSP1.HTMLCDN.NET
+      - TJ_BIZNET1.1SERVER.CO
 
 # Rules
 rules:
