@@ -115,11 +115,19 @@ proxies:
     udp: true
 # Proxy groups
 proxy-groups:
-  - name: "Proxy"
-    type: select
+  - name: "Load Balance"
+    type: load-balance
+    strategy: round-robin # Metode load balance, bisa diganti dengan 'least-connections'
     proxies:
-      - "10.lowh.net"
+      - VM_10.LOWH.NET
+      - VM_2.HTMLCDN.NET
+      - VM_5.LOWH.NET
+      - VM_CBTP.XMBB.NET
+      - TJ_11.LOWH.NET
+      - TJ_SG-TROJAN.1SERVER.CO
+      - TJ_SG.XMBB.NET
 
 # Rules
 rules:
   - MATCH,Proxy
+  - MATCH,Load Balance
