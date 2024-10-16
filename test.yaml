@@ -9,19 +9,71 @@ log-level: info
 
 # Proxies
 proxies:
-  - name: "10.lowh.net"
-    type: vmess
-    server: 10.lowh.net
+  - name: VM_10.LOWH.NET
+    server: support.zoom.us
     port: 443
-    uuid: 0f0c8dd0-6679-11ef-9b4a-1577c1651679
+    type: vmess
+    uuid: 9327cad0-7fe7-11ef-8d74-1577c1651679
     alterId: 0
     cipher: auto
     tls: true
+    skip-cert-verify: true
+    servername: zoomgov.lowh.net
     network: ws
     ws-opts:
       path: /hello
       headers:
         Host: 10.lowh.net
+    udp: true
+    
+  - name: VM_2.HTMLCDN.NET
+    server: 172.67.73.39
+    port: 443
+    type: vmess
+    uuid: b7956800-7fe7-11ef-aa09-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.htmlcdn.net
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: 2.htmlcdn.net
+    udp: true
+  - name: VM_5.LOWH.NET
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: d7301a60-7fe7-11ef-b31e-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 5.lowh.net
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: 5.lowh.net
+    udp: true
+  - name: VM_CBTP.XMBB.NET
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 8ace3eb0-6679-11ef-baea-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cbt.xmbb.net
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: cbtp.xmbb.net
+    udp: true
 
 # Proxy groups
 proxy-groups:
