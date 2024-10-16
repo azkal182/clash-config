@@ -74,7 +74,45 @@ proxies:
       headers:
         Host: cbtp.xmbb.net
     udp: true
-
+  - name: TJ_11.LOWH.NET
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 0d6a5590-7fe8-11ef-a637-1577c1651679
+    skip-cert-verify: true
+    sni: 11.lowh.net
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: 11.lowh.net
+    udp: true
+  - name: TJ_SG-TROJAN.1SERVER.CO
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 1f0e2640-7fe8-11ef-a4bc-1577c1651679
+    skip-cert-verify: true
+    sni: sg-trojan.1server.co
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: sg-trojan.1server.co
+    udp: true
+  - name: TJ_SG.XMBB.NET
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 2ceed940-7fe8-11ef-86bd-1577c1651679
+    skip-cert-verify: true
+    sni: sg.xmbb.net
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: sg.xmbb.net
+    udp: true
 # Proxy groups
 proxy-groups:
   - name: "Proxy"
