@@ -13,7 +13,7 @@ proxies:
     server: support.zoom.us
     port: 443
     type: vmess
-    uuid: 9327cad0-7fe7-11ef-8d74-1577c1651679
+    uuid: 90bd2150-9f7d-11ef-a199-1577c1651679
     alterId: 0
     cipher: auto
     tls: true
