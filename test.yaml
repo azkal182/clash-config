@@ -13,7 +13,7 @@ proxies:
     server: support.zoom.us
     port: 443
     type: vmess
-    uuid: 90bd2150-9f7d-11ef-a199-1577c1651679
+    uuid: 576652c0-bb87-11ef-a956-1577c1651679
     alterId: 0
     cipher: auto
     tls: true
@@ -30,7 +30,7 @@ proxies:
     server: 172.67.73.39
     port: 443
     type: vmess
-    uuid: b7956800-7fe7-11ef-aa09-1577c1651679
+    uuid: 7c4048d0-bb87-11ef-8697-1577c1651679
     alterId: 0
     cipher: auto
     tls: true
@@ -46,7 +46,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: vmess
-    uuid: d7301a60-7fe7-11ef-b31e-1577c1651679
+    uuid: 9b79d250-bb87-11ef-98a8-1577c1651679
     alterId: 0
     cipher: auto
     tls: true
@@ -78,7 +78,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: trojan
-    password: 0d6a5590-7fe8-11ef-a637-1577c1651679
+    password: 1c6ef460-bb87-11ef-843b-1577c1651679
     skip-cert-verify: true
     sni: 11.lowh.net
     network: ws
@@ -91,7 +91,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: trojan
-    password: 1f0e2640-7fe8-11ef-a4bc-1577c1651679
+    password: dc305380-bb87-11ef-a7de-1577c1651679
     skip-cert-verify: true
     sni: sg-trojan.1server.co
     network: ws
@@ -104,7 +104,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: trojan
-    password: 2ceed940-7fe8-11ef-86bd-1577c1651679
+    password: f4736320-bb87-11ef-adcf-1577c1651679
     skip-cert-verify: true
     sni: sg.xmbb.net
     network: ws
@@ -118,7 +118,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: vmess
-    uuid: 8800cc50-63ca-11ef-a685-1577c1651679
+    uuid: fa755870-baf1-11ef-b215-1577c1651679
     alterId: 0
     cipher: auto
     tls: true
@@ -135,7 +135,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: trojan
-    password: 52c9c560-6679-11ef-9f00-1577c1651679
+    password: 15b8e2d0-bb88-11ef-94ac-1577c1651679
     skip-cert-verify: true
     sni: 4.lowh.net
     network: ws
@@ -148,7 +148,7 @@ proxies:
     server: 104.17.3.81support.zoom.us
     port: 443
     type: trojan
-    password: 768490a0-6679-11ef-83fb-1577c1651679
+    password: 281ee400-bb88-11ef-987f-1577c1651679
     skip-cert-verify: true
     sni: biznet1.1server.co
     network: ws
@@ -161,7 +161,7 @@ proxies:
     server: 104.17.3.81
     port: 443
     type: trojan
-    password: a05c23a0-6679-11ef-8db6-1577c1651679
+    password: 471782f0-bb88-11ef-b59b-1577c1651679
     skip-cert-verify: true
     sni: hsp2.htmlcdn.net
     network: ws
