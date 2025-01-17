@@ -1,0 +1,157 @@
+proxies:
+# sg
+# vmess
+  - name: VM_10.lowh.net
+    server: support.zoom.us
+    port: 443
+    type: vmess
+    uuid: e6e35620-d499-11ef-a6e9-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /10.lowh.net/hello
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+  - name: VM_2.htmlcdn.net
+    server: support.zoom.us
+    port: 443
+    type: vmess
+    uuid: ecfdab00-d499-11ef-92b8-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /2.htmlcdn.net/hello
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+
+# trojan
+  - name: Trojan_11.lowh.net
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: e9d75ac0-d499-11ef-923a-1577c1651679
+    skip-cert-verify: true
+    sni: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /11.lowh.net/welcome
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+  - name: TJ_path.cobadl.com
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: 16edca20-d49a-11ef-88d9-1577c1651679
+    skip-cert-verify: true
+    sni: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /path.cobadl.com/welcome
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+  - name: TJ_sg-trojan.1server.co
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: 1b7a9a20-d49a-11ef-bbd7-1577c1651679
+    skip-cert-verify: true
+    sni: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /sg-trojan.1server.co/welcome
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+
+
+
+
+
+# id
+
+# vmess
+  - name: VM_5.lowh.net
+    server: support.zoom.us
+    port: 443
+    type: vmess
+    uuid: f4784880-d499-11ef-ab0c-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /5.lowh.net/hello
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+  - name: VM_hsp1.htmlcdn.net
+    server: support.zoom.us
+    port: 443
+    type: vmess
+    uuid: fcd8b210-d499-11ef-a9f9-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /hsp1.htmlcdn.net/hello
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+
+# trojan
+  - name: TJ_4.lowh.rimuru.my.id
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: f01e0410-d499-11ef-8e96-1577c1651679
+    skip-cert-verify: true
+    sni: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /4.lowh.net/welcome
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+  - name: TJ_biznet1.1server.co
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: f8d43060-d499-11ef-94ea-1577c1651679
+    skip-cert-verify: true
+    sni: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /biznet1.1server.co/welcome
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
+  - name: TJ_hsp2.rimuru.my.id
+    server: support.zoom.us
+    port: 443
+    type: trojan
+    password: 027700c0-d49a-11ef-8b75-1577c1651679
+    skip-cert-verify: true
+    sni: support.zoom.us.wc.akuwibu.Biz.id
+    network: ws
+    ws-opts:
+      path: /hsp2.htmlcdn.net/welcome
+      headers:
+        Host: support.zoom.us.wc.akuwibu.Biz.id
+    udp: true
