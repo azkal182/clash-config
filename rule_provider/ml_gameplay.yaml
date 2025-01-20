@@ -1,0 +1,39 @@
+payload:
+  # Gameplay
+  - DOMAIN-SUFFIX,mobilelegends.com
+  - DOMAIN-SUFFIX,mobile.legends
+  - DOMAIN-SUFFIX,mobile-legends.net
+  - DOMAIN-SUFFIX,aihelp.net
+  - DOMAIN-SUFFIX,adjust.net.in
+
+  - IP-CIDR,119.81.9.0/18
+  - IP-CIDR,169.46.132.0/16
+  - IP-CIDR,128.1.87.0/16
+  - IP-CIDR,161.202.217.0/18
+  - IP-CIDR,129.227.33.1/16
+  - IP-CIDR,163.181.18.0/18
+  - IP-CIDR,58.27.5.0/16
+  - IP-CIDR,103.157.33.54/32,udp
+#103.157.33.54:5011	
+
+  # Port untuk gameplay
+  - DST-PORT,30190
+  - DST-PORT,30220
+  - DST-PORT,30021
+  - DST-PORT,10003
+  - DST-PORT,5011,udp
+
+  - DOMAIN-SUFFIX,akamaitechnologies.com
+  - DOMAIN-SUFFIX,youngjoygame.com
+  - DOMAIN-SUFFIX,yuanzhapp.com
+  - DOMAIN-SUFFIX,sl-reverse.com
+
+  - IP-CIDR,23.59.168.0/16
+  - IP-CIDR,119.81.9.0/16
+  - IP-CIDR,161.202.213.0/16
+  - IP-CIDR,169.48.192.0/18
+  - IP-CIDR,37.48.64.0/18
+  - IP-CIDR,169.56.64.0/18
+  - IP-CIDR,169.44.0.0/17
+  - IP-CIDR,124.202.128.0/16
+  - IP-CIDR,23.248.1.1/16

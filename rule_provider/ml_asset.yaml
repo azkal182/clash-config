@@ -1,0 +1,16 @@
+pyload:
+  # Download Asset
+  - DOMAIN-SUFFIX,akamaitechnologies.com
+  - DOMAIN-SUFFIX,youngjoygame.com
+  - DOMAIN-SUFFIX,yuanzhapp.com
+  - DOMAIN-SUFFIX,sl-reverse.com
+
+  - IP-CIDR,23.59.168.0/16
+  - IP-CIDR,119.81.9.0/16
+  - IP-CIDR,161.202.213.0/16
+  - IP-CIDR,169.48.192.0/18
+  - IP-CIDR,37.48.64.0/18
+  - IP-CIDR,169.56.64.0/18
+  - IP-CIDR,169.44.0.0/17
+  - IP-CIDR,124.202.128.0/16
+  - IP-CIDR,23.248.1.1/16
