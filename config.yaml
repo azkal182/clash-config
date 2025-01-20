@@ -1,0 +1,177 @@
+---
+rule-providers:
+  Direct:
+    type: file
+    behavior: classical
+    path: "./rule_provider/direct.yaml"
+  Reject:
+    type: file
+    behavior: classical
+    path: "./rule_provider/reject.yaml"
+  Streaming:
+    type: file
+    behavior: classical
+    path: "./rule_provider/streaming.yaml"
+  Ewallet:
+    type: file
+    behavior: classical
+    path: "./rule_provider/ewallet.yaml"
+  ChatGpt:
+    type: file
+    behavior: classical
+    path: "./rule_provider/chatgpt.yaml"
+  MLGameplay:
+    type: file
+    behavior: classical
+    path: "./rule_provider/ml_gameplay.yaml"
+  MLAsset:
+    type: file
+    behavior: classical
+    path: "./rule_provider/ml_asset.yaml"
+proxy-providers:
+  PP-SG:
+    type: file
+    path: "./proxy_provider/sg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 30
+  PP-ID:
+    type: file
+    path: "./proxy_provider/id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 30
+proxy-groups:
+  - name: PG-SELECT
+    type: select
+    disable-udp: false
+    use:
+      - PP-SG
+      - PP-ID
+  - name: PG-INDO
+    type: select
+    disable-udp: false
+    use:
+      - PP-ID
+  - name: PG-LB
+    type: load-balance
+    strategy: round-robin
+    disable-udp: false
+    use:
+      - PP-SG
+      - PP-ID
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+  - name: Auto
+    type: url-test
+    disable-udp: false
+    use:
+      - PP-SG
+      - PP-ID
+    url: http://www.gstatic.com/generate_204
+    interval: 30
+dns:
+  nameserver:
+    - 114.114.114.114
+    - 119.29.29.29
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:1053
+  fake-ip-filter:
+    - "+.*"
+  default-nameserver:
+    - 9.9.9.9
+    - 149.112.112.112
+    - 114.114.114.114
+    - 119.29.29.29
+  fallback:
+    - 9.9.9.9
+    - 149.112.112.112
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 100.64.0.0/10
+      - 127.0.0.0/8
+      - 169.254.0.0/16
+      - 172.16.0.0/12
+      - 192.0.0.0/24
+      - 192.0.2.0/24
+      - 192.88.99.0/24
+      - 192.168.0.0/16
+      - 198.18.0.0/15
+      - 198.51.100.0/24
+      - 203.0.113.0/24
+      - 224.0.0.0/4
+      - 240.0.0.0/4
+      - 255.255.255.255/32
+    domain:
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
+      - "+.githubusercontent.com"
+      - "+.googlevideo.com"
+      - "+.msftconnecttest.com"
+      - "+.msftncsi.com"
+  fake-ip-range: 198.18.0.1/16
+redir-port: 7891
+tproxy-port: 7892
+port: 8080
+socks-port: 1080
+mixed-port: 7890
+mode: rule
+log-level: error
+allow-lan: true
+unified-delay: true
+external-controller: 0.0.0.0:9090
+secret: reyre
+external-ui: "ui"
+ipv6: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+rules:
+  - DST-PORT,7895,REJECT
+  - DST-PORT,7892,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - DST-PORT,7895,REJECT
+  - DST-PORT,7892,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - IP-CIDR,8.8.8.8/32,DIRECT,no-resolve
+  - RULE-SET,Ewallet,PG-INDO
+  - RULE-SET,Streaming,PG-INDO
+  - RULE-SET,ChatGpt,PG-INDO
+  - RULE-SET, MLGameplay,DIRECT
+  - RULE-SET, MLAsset,GLOBAL
+  - RULE-SET,Reject,REJECT
+  - MATCH,GLOBAL
+tcp-concurrent: true
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+geodata-loader: memconservative
+keep-alive-interval: 1800
+global-client-fingerprint: chrome
+disable-keep-alive: true
+external-ui-name: yacd
+external-ui-url: https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/refs/heads/gh-pages.zip
+tun:
+  enable: true
+  stack: system
+  device: mihomo
+  mtu: 9000
+  gso: true
+  gso-max-size: 65536
+  endpoint-independent-nat: false
+  auto-route: false
+  auto-redirect: false
+  auto-detect-interface: false
+  dns-hijack: []
+authentication:
+  - mihomo:reyre
