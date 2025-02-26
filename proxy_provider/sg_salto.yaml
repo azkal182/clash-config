@@ -1,0 +1,77 @@
+proxies:
+  - name: VM_10.lowh.net-salto
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: d259ada0-eddd-11ef-ab16-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 10-lowh.rimuru.My.id
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: 10-lowh.rimuru.My.id
+    udp: true
+  - name: VM_2.htmlcdn.net-salto
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 0fde0d20-ede4-11ef-9c1a-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2-htmlcdn.rimuru.My.id
+    network: ws
+    ws-opts:
+      path: /hello
+      headers:
+        Host: 2-htmlcdn.rimuru.My.id
+    udp: true
+
+# trojan
+  - name: Trojan_11.lowh.net-salto
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: d710e450-ede3-11ef-879e-1577c1651679
+    skip-cert-verify: true
+    sni: 11-lowh.rimuru.My.id
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: 11-lowh.rimuru.My.id
+    udp: true
+  - name: TJ_hz1.cobadl.com-salto
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 37560640-ee2c-11ef-a5e2-1577c1651679
+    skip-cert-verify: true
+    sni: hz1.rimuru.My.id
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: hz1.rimuru.My.id
+    udp: true
+  - name: TJ_sg-trojan.1server.co-salto
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: a3622380-ede4-11ef-841f-1577c1651679
+    skip-cert-verify: true
+    sni: he-tj.rimuru.my.id
+    network: ws
+    ws-opts:
+      path: /welcome
+      headers:
+        Host: he-tj.rimuru.my.id
+    udp: true
+    
+    
+    
